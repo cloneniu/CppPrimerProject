@@ -21,6 +21,22 @@ using std::end;
 
 
 int main() {
+	// page 150
+	vector<string> svec = {"a", "b"};
+	for (vector<string>::const_iterator it = svec.begin(); it != svec.end(); ) {
+		cout << *it << endl;
+		// cout << it++->empty() << endl;
+		cout << ++*it << endl;
+	}
+
+	// // page 149
+	// string s("some string");
+	// string::iterator beg = s.begin();
+	// while (beg != s.end() && !isspace(*beg)) {
+	// 	*beg = toupper(*beg);
+	// 	++beg;
+	// }
+	// cout << s << endl;
 	
 	// // page 129
 	// int ia[3][4] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
