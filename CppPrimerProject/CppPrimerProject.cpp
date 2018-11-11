@@ -18,16 +18,75 @@ using std::vector;
 #include <iterator>
 using std::begin;
 using std::end;
-
+#include <bitset>
+using std::bitset;
 
 int main() {
-	// page 150
-	vector<string> svec = {"a", "b"};
-	for (vector<string>::const_iterator it = svec.begin(); it != svec.end(); ) {
-		cout << *it << endl;
-		// cout << it++->empty() << endl;
-		cout << ++*it << endl;
-	}
+	// // page 182
+	// switch (true) {
+	// case true: {
+	// 	string file_name;
+	// 	int ival = 0;
+	// 	int jval;
+	// 	break;
+	// }
+	// case false:
+	// 	jval = 2;
+	// 	if (file_name.empty) {
+	// 		;
+	// 	}
+	// }
+
+	// // page 158 problem 1
+	// cout << "size of built-in types" << endl;
+	// cout << "bool: " << sizeof(bool) << endl;
+	// cout << "char: " << sizeof(char) << endl;
+	// cout << "wchar_t: " << sizeof(wchar_t) << endl;
+	// cout << "char16_t: " << sizeof(char16_t) << endl;
+	// cout << "char32_t: " << sizeof(char32_t) << endl;
+	// cout << "short: " << sizeof(short) << endl;
+	// cout << "int: " << sizeof(int) << endl;
+	// cout << "long: " << sizeof(long) << endl;
+	// cout << "long long: " << sizeof(long long) << endl;
+	// cout << "float: " << sizeof(float) << endl;
+	// cout << "double: " << sizeof(double) << endl;
+	// cout << "long double: " << sizeof(long double) << endl;
+	// problem 2
+	// int x[10];
+	// int *p = x;
+	// cout << sizeof(x) / sizeof(*x) << endl;
+	// cout << sizeof(p) / sizeof(*p) << endl;
+
+	// // page 157
+	// int *p;
+	// cout << sizeof(p) << endl;
+	// cout << sizeof(char) << endl;
+
+	// // page 156
+	// wchar_t out = 'a';
+	// cout << out << endl;
+	// out = ~'q' << 6;
+	// cout << out << endl;
+
+	// // page 154 155
+	// unsigned long quiz1 = 0;
+	// quiz1 |= 1UL << 27;
+	// cout << "No.27 student passed" << endl;
+	// cout << bitset<sizeof(unsigned long) * 8>(quiz1) << endl;
+	// cout << "No.27 student faiedl" << endl;
+	// quiz1 &= ~(1UL << 27);
+	// cout << bitset<sizeof(unsigned long) * 8>(quiz1) << endl;
+	// bool status = quiz1 & (1UL << 27);
+	// cout << "whether No.27 student passed" << endl; 
+	// cout << status << endl;
+	
+	// // page 150
+	// vector<string> svec = {"a", "b"};
+	// for (vector<string>::const_iterator it = svec.begin(); it != svec.end(); ) {
+	// 	cout << *it << endl;
+	// 	// cout << it++->empty() << endl;
+	// 	cout << ++*it << endl;
+	// }
 
 	// // page 149
 	// string s("some string");
