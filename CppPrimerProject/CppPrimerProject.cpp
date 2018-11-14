@@ -20,8 +20,106 @@ using std::begin;
 using std::end;
 #include <bitset>
 using std::bitset;
+#include <stdexcept>
+using std::runtime_error;
+#include <typeinfo>
+
+// // page 211
+// string::size_type find_char(const string &s, char c, string::size_type &occurs) {
+// 	auto ret = s.size();
+// 	occurs = 0;
+// 	for (decltype(ret) i = 0; i != s.size(); ++i) {
+// 		if (s[i] == c) {
+// 			if (ret == s.size()) {
+// 				ret = i;
+// 			}
+// 			++occurs;
+// 		}
+// 	}
+// 	return ret;
+// }
+
+// page 229
+// typedef int arrT[10];
+// using arrT = int[10];
+// arrT (*func(int i));
+// arrT func(int i);
+
+// int arr[10];
+// int *p[10];
+// int (*p)[10];
+// int (*func(int i))[10];
+
+// auto func(int i) -> int(*) [10];
+
 
 int main() {
+	auto func(int i) -> int(*) [10];
+	cout << typeid(func).name() << endl;
+
+	typedef int arrT[10];
+	arrT (*func(int i));
+	cout << typeid(func).name() << endl;
+
+	// // page 211
+	// string s = "aahaha sie";
+	// string::size_type ctr = 0;
+	// auto index = find_char(s, 'a', ctr);
+	// cout << ctr << '\n' << index << endl;
+
+	// // page 198 problem 1
+	// int one, two;
+	// cin >> one >> two;
+	// try {
+	// 	if (two == 0) {
+	// 		throw runtime_error("divide 0");
+	// 	} else {
+	// 		cout << (one / two) << endl;
+	// 	}
+	// } catch (runtime_error err) {
+	// 	cout << err.what() << endl;
+	// }
+
+	// // page 195
+	// Sales_item item1, item2;
+	// while (cin >> item1 >> item2) {
+	// 	try {
+	// 		if (item1.isbn() != item2.isbn()) {
+	// 			throw runtime_error("Data must refer to same ISBN");
+	// 		} else {
+	// 			cout << item1 + item2 << endl;
+	// 		}
+	// 	} catch (runtime_error err) {
+	// 		cout << err.what()
+	// 			 << "\nTry Again? Enter y or n" << endl;
+	// 		char c;
+	// 		cin >> c;
+	// 		if (!cin || c == 'n') {
+	// 			break;
+	// 		}
+	// 	}
+	// }
+
+	// page 194
+	// Sales_item item1, item2;
+	// cin >> item1 >> item2;
+	// if (item1.isbn() != item2.isbn()) {
+	// 	throw runtime_error("Data must refer to same ISBN");
+	// }
+
+	// page 190 problem 1 
+	// do {
+	// 	int v1, v2;
+	// 	cout << "Please enter two numbers to sum:" ;
+	// 	if (cin >> v1 >> v2) {
+	// 		cout << "Sum is: " << v1 + v2 << endl;
+	// 	}
+	// } while (cin);
+
+	// do {
+	// 	int ival = 2;
+	// } while (ival);
+
 	// // page 182
 	// switch (true) {
 	// case true: {
