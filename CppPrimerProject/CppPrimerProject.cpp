@@ -23,6 +23,7 @@ using std::bitset;
 #include <stdexcept>
 using std::runtime_error;
 #include <typeinfo>
+#include <cassert>
 
 // // page 211
 // string::size_type find_char(const string &s, char c, string::size_type &occurs) {
@@ -52,14 +53,90 @@ using std::runtime_error;
 
 // auto func(int i) -> int(*) [10];
 
+// // page 232
+// const string &shorterString(const string &s1, const string &s2){
+// 	cout << "const" << endl;
+// 	return s1.size() < s2.size() ? s1 : s2;
+// }
+
+// string &shorterString(string &s1, string &s2){
+// 	cout << "non const" << endl;
+// 	auto &r = shorterString(const_cast<const string&>(s1),
+// 							const_cast<const string&>(s2));
+// 	return const_cast<string &>(r);
+// }
+
+// // page 238 problem 3
+// string make_plural(size_t ctr, const string &word, const string &ending = "s") {
+// 	return (ctr > 1) ? word + ending : word;
+// }
+
+// // page 243 problem 1
+// string fRecVec(vector<string> &s, size_t i) {
+// 	if (i == s.size()) {
+// 		return "";
+// 	} else {
+// 		assert(s[i].size() > 3);
+// 		if (s[i].size() > 3) {
+// 			return s[i] + fRecVec(s, i + 1);
+// 		} else {
+// 			return fRecVec(s, i + 1);
+// 		}
+// 	}
+// }
+
+// // page 250 problem 1
+// int add(int one, int two) {
+// 	return one + two;
+// }
+// int sub(int one, int two) {
+// 	return one - two;
+// }
+// int mult(int one, int two) {
+// 	return one * two;
+// }
+// int divide(int one, int two) {
+// 	if (two != 0) {
+// 		return one / two;
+// 	} else {
+// 		std::cerr << "divide 0" << endl;
+// 	}
+// }
 
 int main() {
-	auto func(int i) -> int(*) [10];
-	cout << typeid(func).name() << endl;
+	// // page 250 problem 1
+	// decltype(add) * addp = add;
+	// decltype(sub) * subp = sub;
+	// decltype(mult) * multp = mult;
+	// decltype(divide) * dividep = divide;
+	// vector<int (*)(int, int)> vfp = {addp, subp, multp, dividep};
+	// for (auto it : vfp) {
+	// 	cout << (*it)(4, 2) << endl;
+	// }
 
-	typedef int arrT[10];
-	arrT (*func(int i));
-	cout << typeid(func).name() << endl;
+	// // page 243 problem 1
+	// vector<string> vs = {"asli", "eowiei", "dd"};
+	// cout << fRecVec(vs, 0) << endl;
+
+	// // page 242
+	// cout << __FILE__ << endl;
+
+	// // page 238 problem 3
+	// cout << make_plural(2, "success") << endl;;
+	// cout << make_plural(2, "failure") << endl;;
+
+	// // page 232
+	// string s1 = "haha", s2 = "d";
+	// string &rs1 = s1, &rs2 = s2;
+	// cout << shorterString(s1, s2) << endl;
+
+	// // page 229
+	// auto func(int i) -> int(*) [10];
+	// cout << typeid(func).name() << endl;
+
+	// typedef int arrT[10];
+	// arrT (*func(int i));
+	// cout << typeid(func).name() << endl;
 
 	// // page 211
 	// string s = "aahaha sie";
