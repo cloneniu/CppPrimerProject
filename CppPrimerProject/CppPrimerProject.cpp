@@ -103,7 +103,16 @@ using std::runtime_error;
 // 	}
 // }
 
+// page 274
+#include "Screen.h"
+
 int main() {
+	// page 274
+	Screen s(5, 6, 'd');
+	s.some_member();
+	cout << s.get(1, 1) << endl;
+	// cout << s.fGiveSomeMember() << endl;
+
 	// // page 250 problem 1
 	// decltype(add) * addp = add;
 	// decltype(sub) * subp = sub;
