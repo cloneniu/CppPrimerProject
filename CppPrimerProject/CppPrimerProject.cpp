@@ -109,10 +109,10 @@ using std::runtime_error;
 int main() {
 	// page 274
 	Screen s(5, 6, 'd');
-	s.some_member();
+	s.set(1, 1, 'a');
 	cout << s.get(1, 1) << endl;
+	cout << s.get(2, 1) << endl;
 	// cout << s.fGiveSomeMember() << endl;
-
 	// // page 250 problem 1
 	// decltype(add) * addp = add;
 	// decltype(sub) * subp = sub;
