@@ -35,6 +35,6 @@ std::ostream &print(std::ostream &os, const Sales_data &item) {
 // 	return sum;
 // }
 
-Sales_data::Sales_data(std::istream &is) {
+Sales_data::Sales_data(std::istream &is): Sales_data() {
 	read(is, *this);
 }
