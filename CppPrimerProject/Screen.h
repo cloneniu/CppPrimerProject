@@ -1,19 +1,25 @@
+#include <iostream>
 #include <string>
+#define SCREEN
 class Screen {
 public:
 	typedef std::string::size_type pos;
 	Screen() = default;
 	Screen(pos ht, pos wd): height(ht), width(wd), contents(ht * wd, ' ') { }
 	Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) { }
+	Screen &move(pos r, pos c);
 	char get() const {
 		return contents[cursor];
 	}
-	inline char get(pos ht, pos wd) const;
-	inline Screen &move(pos r, pos c);
+	char get(pos ht, pos wd) const;
 	void some_member() const;
 	size_t fGiveSomeMember() const;
-	inline Screen &set(char);
-	inline Screen &set(pos, pos, char);
+	Screen &set(char);
+	Screen &set(pos, pos, char);
+	friend class Window_mgr;
+	void fPrintContents() const;
+	// page 283
+	pos size() const;
 private:
 	pos cursor = 0;
 	pos height = 0, width = 0;
@@ -45,3 +51,4 @@ Screen &Screen::set(pos r, pos col, char ch) {
 	contents[r * width + col] = ch;
 	return *this;
 }
+

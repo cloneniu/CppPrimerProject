@@ -106,13 +106,31 @@ using std::runtime_error;
 // page 274
 #include "Screen.h"
 
+// page 283
+#include "Window_mgr.h"
+
 int main() {
-	// page 274
-	Screen s(5, 6, 'd');
-	s.set(1, 1, 'a');
-	cout << s.get(1, 1) << endl;
-	cout << s.get(2, 1) << endl;
+	// page 291
+	Sales_data d(cin);
+	cout << d.isbn() << endl;
+
+	// // page 274
+	// Screen s(5, 6, 'd');
+	// s.set(1, 1, 'a');
+	// cout << s.get(1, 1) << endl;
+	// cout << s.get(2, 1) << endl;
 	// cout << s.fGiveSomeMember() << endl;
+	// Screen ss(3, 4, 'a');
+	// ss.set(0, 0, 'z');
+	// Window_mgr w;
+	// cout << "length of s is " << w.fPushNew(s) << endl;
+	// cout << "length of ss is " << w.fPushNew(ss) << endl;
+	// w.fGetItem(0).fPrintContents();
+	// cout << endl;
+	// w.fGetItem(1).fPrintContents();
+	// w.clear(1);
+	// cout << "size of ss is " << ss.size() << endl;
+
 	// // page 250 problem 1
 	// decltype(add) * addp = add;
 	// decltype(sub) * subp = sub;
