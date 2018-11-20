@@ -27,6 +27,12 @@
     <ClInclude Include="Sales_data.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Example.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NoDefault.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -42,6 +48,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Sales_data.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NoDefault.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Example.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

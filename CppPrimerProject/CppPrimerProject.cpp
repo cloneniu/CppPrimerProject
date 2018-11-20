@@ -109,10 +109,27 @@ using std::runtime_error;
 // page 283
 #include "Window_mgr.h"
 
+// page 294
+#include "NoDefault.h"
+
+// page 304
+#include "Example.h"
+
 int main() {
-	// page 291
-	Sales_data d(cin);
-	cout << d.isbn() << endl;
+	// // page 304
+	// Example e;
+	// e.initRate(3.3);
+	// cout << e.rate << endl;
+	// vector<double> vec(10);
+
+	// // page 294
+	// CCCC ccc;
+	// vector<CCCC> vc(10);
+	// ? exercise 7.46
+
+	// // page 291
+	// Sales_data d(cin);
+	// cout << d.isbn() << endl;
 
 	// // page 274
 	// Screen s(5, 6, 'd');
@@ -279,7 +296,7 @@ int main() {
 	// quiz1 &= ~(1UL << 27);
 	// cout << bitset<sizeof(unsigned long) * 8>(quiz1) << endl;
 	// bool status = quiz1 & (1UL << 27);
-	// cout << "whether No.27 student passed" << endl; 
+	// cout << "whether No.27 student passed" << endl;
 	// cout << status << endl;
 	
 	// // page 150
@@ -724,15 +741,15 @@ int main() {
 	//  * comment pairs /* */ cannot nest
 	// 	*/
 
-    // // page 6
-    // std::cout << "Enter two numbers:" << std::endl;
-    // int v1 = 0, v2 = 0;
-    // std::cin >> v1 >> v2;
-    // std::cout << "The sum of " << v1 << " and " << v2 << " is " << v1 + v2
-    //           << std::endl;
+	// // page 6
+	// std::cout << "Enter two numbers:" << std::endl;
+	// int v1 = 0, v2 = 0;
+	// std::cin >> v1 >> v2;
+	// std::cout << "The sum of " << v1 << " and " << v2 << " is " << v1 + v2
+	//           << std::endl;
 
-	system("pause");
-    return 0;
+	// system("pause");
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
