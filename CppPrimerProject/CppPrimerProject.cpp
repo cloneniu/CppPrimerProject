@@ -115,7 +115,34 @@ using std::runtime_error;
 // page 304
 #include "Example.h"
 
+// page 315
+using std::ends;
+using std::flush;
+using std::unitbuf;
+using std::nounitbuf;
+
+// page 316
+using std::ostream;
+using std::cerr;
+
 int main() {
+	cout << unitbuf;
+	// page 316
+	cin.tie(&cout);
+	ostream *old_tie = cin.tie(nullptr);
+	cin.tie(&cerr);
+	cin.tie(old_tie);
+
+	// page 315
+	// cout << "endl!" << endl;
+	// cout << "flush!" << flush;
+	// cout << "ends!" << ends;
+	// cout << "hi" << endl;
+
+	// cout << "hi";
+	// cout << "hi two";
+	// cout << nounitbuf;
+
 	// // page 304
 	// Example e;
 	// e.initRate(3.3);
