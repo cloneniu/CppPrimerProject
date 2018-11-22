@@ -115,15 +115,227 @@ using std::runtime_error;
 // page 304
 #include "Example.h"
 
-// page 314
-#include "Exercise.h"
+// page 315
+using std::ends;
+using std::flush;
+using std::unitbuf;
+using std::nounitbuf;
 
-int main() {
-	// page 314 exercise 8.1
-	string strTemp;
-	fE812(cin) >> strTemp;
-	cout << "temp" << endl;
-	cout << strTemp << endl;
+// page 316
+using std::ostream;
+using std::cerr;
+
+// page 317
+#include <fstream>
+using std::ifstream;
+using std::ofstream;
+using std::istringstream;
+
+// page 322
+#include "Exercise.h"
+#include <sstream>
+using std::ostringstream;
+
+int main(int argc, char **argv) {
+	// cout << unitbuf;
+	// // page 323
+	// string line, word;
+	// vector<PersonInfo> people;
+	// string infileName = "PeoplePhone.txt";
+	// ifstream ifPeoplePhone(infileName);
+	// while (getline(ifPeoplePhone, line)) {
+	// 	PersonInfo info;
+	// 	istringstream record(line);
+	// 	record >> info.name;
+	// 	while (record >> word) {
+	// 		info.phones.push_back(word);
+	// 	}
+	// 	people.push_back(info);
+	// }
+	// for (const auto &entry : people) {
+	// ostringstream formatted, badNums;
+	// 	for (const auto &nums : entry.phones) {
+	// 		if (!valid(nums)) {
+	// 			badNums << " " << nums;
+	// 		} else {
+	// 			formatted << " " << format(nums);
+	// 		}
+	// 	}
+	// 	if (badNums.str().empty()) {
+	// 		cout << entry.name << " "
+	// 			 << formatted.str() << endl;
+	// 	} else {
+	// 		cerr << "input error: " << entry.name
+	// 			 << " invalid numbers(s) " << badNums.str() << endl;
+	// 	}
+	// }
+
+	// page 322 exercise 8.3.1
+	// // 8.9
+	// fReadReturnIstream(cin);
+	// // 8.10
+	// string infileName = "Sales_data.txt";
+	// vector<string> vsTemp;
+	// string sTemp;
+	// ifstream ifSalesData(infileName);
+	// while (!ifSalesData.eof()) {
+	// 	getline(ifSalesData, sTemp);
+	// 	vsTemp.push_back(sTemp);
+	// }
+	// for (string t: vsTemp) {
+	// 	cout << t << endl;
+	// }
+	// cout << "read done" << endl;
+	// istringstream strmTemp;
+	// vector<string> vsWords;
+	// for (string t: vsTemp) {
+	// 	cout << "..." << endl;
+	// 	cout << t << endl;
+	// 	cout << "string in vector" << endl;;
+	// 	strmTemp.str(t);
+	// 	while (strmTemp >> sTemp) {
+	// 		cout << sTemp << endl;
+	// 	}
+	// 	strmTemp.clear();
+	// }
+	// // 8.12
+	// string line, word;
+	// vector<PersonInfo> people;
+	// string infileName = "PeoplePhone.txt";
+	// ifstream ifPeoplePhone(infileName);
+	// while (getline(ifPeoplePhone, line)) {
+	// 	PersonInfo info;
+	// 	istringstream record(line);
+	// 	record >> info.name;
+	// 	while (record >> word) {
+	// 		info.phones.push_back(word);
+	// 	}
+	// 	people.push_back(info);
+	// }
+	// for (auto t:people) {
+	// 	cout << t.name << endl;
+	// 	for (auto phone: t.phones) {
+	// 		cout << phone << ends;
+	// 	}
+	// 	cout << endl;
+	// }
+
+	// // page 320 exercise 8.2.2
+	// // 8.7
+	// string fileioName = "page22_problem1.22_infile.txt";
+	// vector<string> vsTemp;
+	// ifstream in(fileioName);
+	// ofstream out("page320_exercise822_outfile.txt");
+	// string sTemp;
+	// if (in) {
+	// 	while (!in.eof()) {
+	// 		getline(in, sTemp);
+	// 		vsTemp.push_back(sTemp);
+	// 	}
+	// 	in.close();
+	// }
+	// for (string st: vsTemp) {
+	// 	out << st << endl;
+	// }
+	// cout << "end of program" << endl;
+	// //8.8
+	// string fileioName = "page22_problem1.22_infile.txt";
+	// vector<string> vsTemp;
+	// ifstream in(fileioName);
+	// ofstream out("page320_exercise822_outfile.txt", ofstream::app);
+	// string sTemp;
+	// if (in) {
+	// 	while (!in.eof()) {
+	// 		getline(in, sTemp);
+	// 		vsTemp.push_back(sTemp);
+	// 	}
+	// 	in.close();
+	// }
+	// for (string st: vsTemp) {
+	// 	out << st << endl;
+	// }
+	// cout << "end of program" << endl;
+
+	// // page 319 exercise 8.2.1
+	// string fileioName = "page22_problem1.22_infile.txt";
+	// vector<string> vsTemp;
+	// ifstream in(fileioName);
+	// string sTemp;
+	// // 8.4
+	// if (in) {
+	// 	while (!in.eof()) {
+	// 		getline(in, sTemp);
+	// 		vsTemp.push_back(sTemp);
+	// 	}
+	// 	in.close();
+	// }
+	// cout << "output vector" << endl;
+	// for (string st: vsTemp) {
+	// 	cout << st << endl;
+	// }
+	// cout << "end of program" << endl;
+	// // 8.5
+	// if (in) {
+	// 	while (in >> sTemp) {
+	// 		vsTemp.push_back(sTemp);
+	// 	}
+	// 	in.close();
+	// }
+	// cout << "output vector" << endl;
+	// for (string st: vsTemp) {
+	// 	cout << st << endl;
+	// }
+	// cout << "end of program" << endl;
+
+	// // page 318
+	// string fileioName = "page22_problem1.22_infile.txt";
+	// ifstream in(fileioName);
+	// ofstream out;
+	// out.open(fileioName + ".copy");
+	// out.close();
+	// out.open(fileioName + "2");
+	// cout << in.rdstate() << endl;
+
+	// // page 317
+	// ifstream input(argv[1]);
+	// ofstream output(argv[2]);
+	// Sales_data total;
+	// if (read(input, total)) {
+	// 	Sales_data trans;
+	// 	while (read(input, trans)) {
+	// 		if (total.isbn() == trans.isbn()) {
+	// 			total.combine(trans);
+	// 		} else {
+	// 			print(output, total) << endl;
+	// 			total = trans;
+	// 		}
+	// 	}
+	// 	print(output, total) << endl;
+	// } else {
+	// 	cerr << "No data?!" << endl;
+	// }
+
+	// // page 316
+	// cin.tie(&cout);
+	// ostream *old_tie = cin.tie(nullptr);
+	// cin.tie(&cerr);
+	// cin.tie(old_tie);
+
+	// page 315
+	// cout << "endl!" << endl;
+	// cout << "flush!" << flush;
+	// cout << "ends!" << ends;
+	// cout << "hi" << endl;
+
+	// cout << "hi";
+	// cout << "hi two";
+	// cout << nounitbuf;
+
+	// // page 314 exercise 8.1
+	// string strTemp;
+	// fE812(cin) >> strTemp;
+	// cout << "temp" << endl;
+	// cout << strTemp << endl;
 
 	// // page 304
 	// Example e;
@@ -757,7 +969,7 @@ int main() {
 	// std::cout << "The sum of " << v1 << " and " << v2 << " is " << v1 + v2
 	//           << std::endl;
 
-	// system("pause");
+	system("pause");
 	return 0;
 }
 
