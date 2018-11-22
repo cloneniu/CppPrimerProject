@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Example.h" />
+    <ClInclude Include="Exercise.h" />
     <ClInclude Include="NoDefault.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Sales_data.h" />
@@ -163,6 +164,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Example.cpp" />
+    <ClCompile Include="Exercise.cpp" />
     <ClCompile Include="NoDefault.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
