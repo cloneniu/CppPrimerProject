@@ -115,7 +115,16 @@ using std::runtime_error;
 // page 304
 #include "Example.h"
 
+// page 314
+#include "Exercise.h"
+
 int main() {
+	// page 314 exercise 8.1
+	string strTemp;
+	fE812(cin) >> strTemp;
+	cout << "temp" << endl;
+	cout << strTemp << endl;
+
 	// // page 304
 	// Example e;
 	// e.initRate(3.3);
