@@ -1,5 +1,4 @@
 #include "Exercise.h"
-<<<<<<< HEAD
 #include <iostream>
 #include <string>
 
@@ -15,9 +14,6 @@ std::istream &fE812(std::istream &cinOne) {
 	std::cout << "eof occur" << std::endl;
 	cinOne.clear();
 	return cinOne;
-=======
-#include <string>
-#include <iostream>
 
 std::istream &fReadReturnIstream(std::istream &in) {
 	std::string sTemp;
@@ -38,5 +34,4 @@ bool valid(const std::string &num) {
 
 std::string format(const std::string &num) {
 	return "k" + num;
->>>>>>> refs/remotes/origin/master
 }

@@ -1,13 +1,11 @@
 #ifndef EXERCISE_H
 #define EXERCISE_H
-<<<<<<< HEAD
 
 #include <iostream>
 
 // page 314
 std::istream &fE812(std::istream &cinOne);
 
-=======
 #include <iostream>
 #include <string>
 #include <vector>
@@ -20,5 +18,4 @@ struct PersonInfo {
 
 bool valid(const std::string &num);
 std::string format(const std::string &num);
->>>>>>> refs/remotes/origin/master
 #endif
