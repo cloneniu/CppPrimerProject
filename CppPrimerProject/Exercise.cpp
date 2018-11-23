@@ -14,6 +14,7 @@ std::istream &fE812(std::istream &cinOne) {
 	std::cout << "eof occur" << std::endl;
 	cinOne.clear();
 	return cinOne;
+}
 
 std::istream &fReadReturnIstream(std::istream &in) {
 	std::string sTemp;

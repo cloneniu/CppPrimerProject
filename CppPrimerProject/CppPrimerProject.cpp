@@ -136,8 +136,56 @@ using std::istringstream;
 #include <sstream>
 using std::ostringstream;
 
+// page 329
+#include <deque>
+using std::deque;
+#include <list>
+using std::list;
+
 int main(int argc, char **argv) {
-	// cout << unitbuf;
+	cout << unitbuf;
+	// // page 332 exercise 9.2.1
+	// // 9.3
+	vector<int> viTemp = {1, 2, 3, 6, 3, 2, 1};
+	// // vector<int>::iterator beg = viTemp.begin(), end = viTemp.end();
+	auto beg = viTemp.begin(), end = viTemp.end();
+	// int val = 6;
+	// while (beg != end) {
+	// 	if (*beg == 6) {
+	// 		cout << *beg << endl;
+	// 	}
+	// 	++beg;
+	// }
+	// //  9.4
+	// if (fFind(viTemp.begin(), viTemp.end(), 3)) {
+	// 	cout << "found" << endl;
+	// } else {
+	// 	cout << "not found" << endl;
+	// }
+	// // 9.5
+	// if (fFindIter(viTemp.begin(), viTemp.end(), 0) != viTemp.end()) {
+	// 	cout << "found" << endl;
+	// } else {
+	// 	cout << "not found" << endl;
+	// }
+	// 9.6
+	list<int> lst1 = {1, 2, 3};
+	list<int>::iterator iter1 = lst1.begin(), iter2 = lst1.end();
+	while (iter1 != iter2) {
+		//while (iter1 < iter2) { // wrong < operator
+		cout << *iter1 << endl;
+		++iter1;
+	}
+
+	
+	// page 329
+	// std::list<Sales_data> lS;
+	// std::deque<double> dS;
+	// vector<vector<string>> lines;
+	// noDefault temp(3);
+	// vector<noDefault> vecnod(3, 3);
+	// std::deque<int> deint;
+
 	// // page 323
 	// string line, word;
 	// vector<PersonInfo> people;

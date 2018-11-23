@@ -18,4 +18,17 @@ struct PersonInfo {
 
 bool valid(const std::string &num);
 std::string format(const std::string &num);
+
+class noDefault {
+private:
+	int k;
+public:
+	noDefault(int i) {
+		k = i;
+	}
+};
+
+// page 332 9.4
+bool fFind(std::vector<int>::iterator beg, std::vector<int>::iterator end, int val);
+std::vector<int>::iterator fFindIter(std::vector<int>::iterator beg, std::vector<int>::iterator end, int val);
 #endif
