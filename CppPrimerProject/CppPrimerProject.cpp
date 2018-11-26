@@ -141,14 +141,224 @@ using std::ostringstream;
 using std::deque;
 #include <list>
 using std::list;
+#include <forward_list>
+using std::forward_list;
+
 
 int main(int argc, char **argv) {
 	cout << unitbuf;
+	// page 352 exercise 9.3.4
+	// // 9.27
+	// forward_list<int> temp = {1, 2, 3, 4, 5};
+	// auto beg = temp.before_begin();
+	// auto curr = temp.begin();
+	// while (curr != temp.end()) {
+	// 	if (*curr % 2) {
+	// 		curr = temp.erase_after(beg);
+	// 	} else {
+	// 		++beg;
+	// 		++curr;
+	// 	}
+	// }
+	// for (auto t: temp) {
+	// 	cout << t << endl;
+	// }
+	// 9.28
+	forward_list<string> s{ "a", "b", "c" };
+	string loc = "x";
+	string ins = "d";
+	fInsertStringIntoForwardList(s, loc, ins);
+
+	// // page 351 table forward_list erase
+	// forward_list<int> temp = {1, 2, 3};
+	// auto beg = temp.begin();
+	// auto end = ++++temp.begin();
+	// temp.erase_after(beg, end);
+	// for (auto t: temp) {
+	// 	cout << t << endl;
+	// }
+
+	// // page 350 exercise 9.3.3
+	// // 9.26
+	// int ia[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89 };
+	// vector<int> via;
+	// list<int> lia;
+	// for (int *pia = ia; pia != ia + sizeof(ia) / sizeof(*ia); ++pia) {
+	// 	via.push_back(*pia);
+	// 	lia.push_back(*pia);
+	// }
+	// cout << "copy" << endl;
+	// cout << "vector" << endl;
+	// for (auto t: via) {
+	// 	cout << t << endl;
+	// }
+	// cout << "list" << endl;
+	// for (auto t: lia) {
+	// 	cout << t << endl;
+	// }
+	// // for (auto itv = via.begin(); itv != via.end(); ) {
+	// // 	if (*itv % 2 == 0) {
+	// // 		itv = via.erase(itv);
+	// // 	} else {
+	// // 		++itv;
+	// // 	}
+	// // }
+	// auto it = via.begin();
+	// while (it != via.end()) {
+	// 	if (*it % 2 == 0) {
+	// 		it = via.erase(it);
+	// 	} else {
+	// 		++it;
+	// 	}
+	// }
+	// // for (auto itl = lia.begin(); itl != lia.end();) {
+	// // 	if (*itl % 2 != 0) {
+	// // 		itl = lia.erase(itl);
+	// // 	} else {
+	// // 		++itl;
+	// // 	}
+	// // }
+	// auto itl = lia.begin();
+	// while (itl != lia.end()) {
+	// 	if (*itl % 2 != 0) {
+	// 		itl = lia.erase(itl);
+	// 	} else {
+	// 		++itl;
+	// 	}
+	// }
+	// cout << "erase" << endl;
+	// cout << "vector" << endl;
+	// for (auto t: via) {
+	// 	cout << t << endl;
+	// }
+	// cout << "list" << endl;
+	// for (auto t: lia) {
+	// 	cout << t << endl;
+	// }
+
+	// // page 349 table erase(b,e)
+	// vector<int> temp{1, 2, 3};
+	// auto beg = temp.begin();
+	// auto erasep = temp.erase(beg, beg + 1);
+	// cout << "return p" << endl;
+	// cout << *erasep << endl;
+	// for (auto t: temp) {
+	// 	cout << t << endl;
+	// }
+
+	// page 348 exercise 9.3.2
+	// // 9.24
+	// vector<int> temp{1, 2, 3};
+	// cout << temp[0] << endl;
+	// cout << temp.front() << endl;
+	// cout << *temp.begin() << endl;
+
+	// page 346 exercise 9.3.1
+	// // 9.18
+	// deque<string> des;
+	// string stemp;
+	// while (cin >> stemp) {
+	// 	des.push_back(stemp);
+	// }
+	// for (string t: des) {
+	// 	cout << t << endl;
+	// }
+	// // 9.19
+	// list<string> des;
+	// string stemp;
+	// while (cin >> stemp) {
+	// 	des.push_back(stemp);
+	// }
+	// for (string t: des) {
+	// 	cout << t << endl;
+	// }
+	// // 9.20
+	// list<int> lii{1, 2, 3};
+	// deque<int> one;
+	// deque<int> two;
+	// int itemp;
+	// for (int t: lii) {
+	// 	if (t % 2 == 0) {
+	// 		one.push_back(t);
+	// 	} else {
+	// 		two.push_back(t);
+	// 	}
+	// }
+	// cout << "even" << endl;
+	// for (int t: one) {
+	// 	cout << t << endl;
+	// }
+	// cout << "odd" << endl;
+	// for (int t: two) {
+	// 	cout << t << endl;
+	// }
+
+	// // page 340 exercise 9.2.5
+	// // 9.14
+	// vector<string> to;
+	// list<const char*> from{"a", "b"};
+	// to.assign(from.begin(), from.end());
+	// cout << *to.begin() << endl;
+
+	// // page 339
+	// list<string> slist1(1);
+	// slist1.assign(10, "hiya");
+
+	// // page 338 warning
+	// vector<int> one{1, 2, 3};
+	// vector<int> two{5, 6, 7, 8};
+	// auto itone = one.begin();
+	// auto ittwo = two.begin();
+	// // one.assign(5, 0);
+	// cout << *itone << endl;
+	// cout << *ittwo << endl;
+	// one.swap(two);
+	// cout << *itone << endl;
+	// cout << *ittwo << endl;
+	// // page end
+	// list<string> names{"a"};
+	// vector<const char*> oldstyle{"b"};
+	// cout << *names.begin() << endl;
+	// names.assign(oldstyle.begin(), oldstyle.end());
+	// cout << *names.begin() << endl;
+
+	// page 337 exercise 9.2.4
+	// // 9.11
+	// vector<int> init1;
+	// vector<int> init2(10);
+	// vector<int> init3(10, 1);
+	// vector<int> init4 = {1, 2, 3};
+	// vector<int> init5{1, 2, 3};
+	// vector<int> init6 = init2;
+	// vector<int> init7(init2);
+	// vector<int> init8(init2.begin(), init2.end());
+	// // 9.13
+	// list<int> fromlist{1, 2, 3};
+	// vector<int> fromvector{1, 2, 3};
+	// vector<double> to1(fromlist.begin(), fromlist.end());
+	// vector<double> to2(fromvector.begin(), fromvector.end());
+	// // vector<double> to2(fromvector); // error
+
+
+	// // page 335
+	// list<string> authors = {"Milton", "Shakespeare", "Austen"};
+	// vector<const char*> articles= {"a", "an", "the"};
+	// // list<string> list2(authors); // correct
+	// // deque<string> authList(authors);
+	// // vector<string> words(articles);
+	// // forward_list<string> words(articles.begin(), articles.end());
+
+	// auto it = articles.begin() + 2;
+	// list<string> articlescopy(articles.begin(), it);
+	// for (auto ele: articlescopy) {
+	// 	cout << ele << endl;
+	// }
+
 	// // page 332 exercise 9.2.1
 	// // 9.3
-	vector<int> viTemp = {1, 2, 3, 6, 3, 2, 1};
-	// // vector<int>::iterator beg = viTemp.begin(), end = viTemp.end();
-	auto beg = viTemp.begin(), end = viTemp.end();
+	// vector<int> viTemp = {1, 2, 3, 6, 3, 2, 1};
+	// vector<int>::iterator beg = viTemp.begin(), end = viTemp.end();
+	// auto beg = viTemp.begin(), end = viTemp.end();
 	// int val = 6;
 	// while (beg != end) {
 	// 	if (*beg == 6) {
@@ -168,14 +378,14 @@ int main(int argc, char **argv) {
 	// } else {
 	// 	cout << "not found" << endl;
 	// }
-	// 9.6
-	list<int> lst1 = {1, 2, 3};
-	list<int>::iterator iter1 = lst1.begin(), iter2 = lst1.end();
-	while (iter1 != iter2) {
-		//while (iter1 < iter2) { // wrong < operator
-		cout << *iter1 << endl;
-		++iter1;
-	}
+	// // 9.6
+	// list<int> lst1 = {1, 2, 3};
+	// list<int>::iterator iter1 = lst1.begin(), iter2 = lst1.end();
+	// while (iter1 != iter2) {
+	// 	//while (iter1 < iter2) { // wrong < operator
+	// 	cout << *iter1 << endl;
+	// 	++iter1;
+	// }
 
 	
 	// page 329

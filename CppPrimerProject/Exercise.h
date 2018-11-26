@@ -11,6 +11,10 @@ std::istream &fE812(std::istream &cinOne);
 #include <vector>
 std::istream &fReadReturnIstream(std::istream &in);
 
+// page 352 exercise 9.3.4
+#include <forward_list>
+
+
 struct PersonInfo {
 	std::string name;
 	std::vector<std::string> phones;
@@ -32,3 +36,6 @@ public:
 bool fFind(std::vector<int>::iterator beg, std::vector<int>::iterator end, int val);
 std::vector<int>::iterator fFindIter(std::vector<int>::iterator beg, std::vector<int>::iterator end, int val);
 #endif
+
+// page 352 exercise 9.28
+void fInsertStringIntoForwardList(std::forward_list<std::string> &s, std::string loc, std::string ins);
