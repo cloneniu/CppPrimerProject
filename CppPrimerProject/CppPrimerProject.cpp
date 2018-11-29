@@ -143,10 +143,84 @@ using std::deque;
 using std::list;
 #include <forward_list>
 using std::forward_list;
-
+#include <stack>
+using std::stack;
 
 int main(int argc, char **argv) {
 	cout << unitbuf;
+	// page 370
+	stack<int> intStack;
+	for (size_t ix = 0; ix != 10; ++ix) {
+		intStack.push(ix);
+	}
+	while (!intStack.empty()) {
+		int value = intStack.top();
+		intStack.pop();
+		cout << value << endl;
+	}
+	// // page 363
+	// // whether char * initialized from "" contain /0
+	// const char *cp = "haha";
+	// cout << cp[5] << endl;
+
+	// // page 361 exercise 9.5.1
+	// // 9.41
+	// vector<char> vc{'a', 'b', 'c'};
+	// string s(vc.begin(), vc.end());
+	// cout << s << endl;
+	// // 9.42 ??
+	// string ss;
+	// cout << ss.capacity() << endl;
+	// ss.shrink_to_fit();
+	// cout << ss.capacity() << endl;
+	// ss.reserve(100);
+	// cout << ss.capacity() << endl;
+	// for (int i = 0; i != 100; ++i) {
+	// 	// ss.push_back(std::to_string(i));
+	// 	ss += 'a';
+	// }
+	// cout << ss << endl;
+	// cout << ss.size() << endl;
+	// cout << ss.capacity() << endl;
+	// ss.shrink_to_fit();
+	// cout << ss.capacity() << endl;
+
+	// // page 359 exercise 9.4
+	// // 9.39
+	// vector<string> svec;
+	// svec.reserve(1024);
+	// string word;
+	// for (int i = 0; i != 256; ++i) {
+	// 	svec.push_back(std::to_string(i));
+	// }
+	// svec.resize(svec.size() + svec.size() / 2);
+	// cout << "svec size: " << svec.size()
+	//      << " capacity: " << svec.capacity() << endl;
+
+	// // page 357
+	// vector<int> ivec;
+	// cout << "ivec:size: " << ivec.size()
+	//      << " capacity: " << ivec.capacity() << endl;
+	// for (vector<int>::size_type ix = 0; ix != 24; ++ix) {
+	// 	ivec.push_back(ix);
+	// }
+	// cout << "ivec:size: " << ivec.size()
+	//      << " capacity: " << ivec.capacity() << endl;
+	// ivec.reserve(50);
+	// cout << "ivec:size: " << ivec.size()
+	//      << " capacity: " << ivec.capacity() << endl;
+	// for (vector<int>::size_type ix = 0; ix != 26; ++ix) {
+	// 	ivec.push_back(ix);
+	// }
+	// cout << "ivec:size: " << ivec.size()
+	//      << " capacity: " << ivec.capacity() << endl;
+	// ivec.push_back(0);
+	// cout << "ivec:size: " << ivec.size()
+	//      << " capacity: " << ivec.capacity() << endl;
+	// ivec.shrink_to_fit();
+	// cout << "ivec:size: " << ivec.size()
+	//      << " capacity: " << ivec.capacity() << endl;
+
 	// page 352 exercise 9.3.4
 	// // 9.27
 	// forward_list<int> temp = {1, 2, 3, 4, 5};
@@ -163,11 +237,11 @@ int main(int argc, char **argv) {
 	// for (auto t: temp) {
 	// 	cout << t << endl;
 	// }
-	// 9.28
-	forward_list<string> s{ "a", "b", "c" };
-	string loc = "x";
-	string ins = "d";
-	fInsertStringIntoForwardList(s, loc, ins);
+	// // 9.28
+	// forward_list<string> s{ "a", "b", "c" };
+	// string loc = "x";
+	// string ins = "d";
+	// fInsertStringIntoForwardList(s, loc, ins);
 
 	// // page 351 table forward_list erase
 	// forward_list<int> temp = {1, 2, 3};
